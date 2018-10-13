@@ -54,7 +54,7 @@ def product_detail(product_id):
   """Provide HTML page with a given product."""
   # Query: get Product object by ID.
   product = mongo.db.products.find_one({ "_id": ObjectId(product_id) })
-  print product
+  print(product)
   if product is None:
     # Abort with Not Found.
     abort(404)
